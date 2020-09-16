@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include land_planning_and_allocation *.css
+recursive-include land_planning_and_allocation *.csv
+recursive-include land_planning_and_allocation *.html
+recursive-include land_planning_and_allocation *.ico
+recursive-include land_planning_and_allocation *.js
+recursive-include land_planning_and_allocation *.json
+recursive-include land_planning_and_allocation *.md
+recursive-include land_planning_and_allocation *.png
+recursive-include land_planning_and_allocation *.py
+recursive-include land_planning_and_allocation *.svg
+recursive-include land_planning_and_allocation *.txt
+recursive-exclude land_planning_and_allocation *.pyc
