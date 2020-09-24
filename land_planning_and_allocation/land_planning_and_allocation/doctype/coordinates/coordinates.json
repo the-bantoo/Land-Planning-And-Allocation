@@ -1,0 +1,46 @@
+{
+ "actions": [],
+ "creation": "2020-09-19 20:48:23.839690",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "longitude",
+  "latitude",
+  "plots"
+ ],
+ "fields": [
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Longitude",
+   "reqd": 1
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Latitude",
+   "reqd": 1
+  },
+  {
+   "fieldname": "plots",
+   "fieldtype": "Link",
+   "label": "Plots",
+   "options": "Subdivision Plot"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2020-09-21 13:45:00.571248",
+ "modified_by": "Administrator",
+ "module": "Land Planning And Allocation",
+ "name": "Coordinates",
+ "owner": "duncan@thebantoo.com",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

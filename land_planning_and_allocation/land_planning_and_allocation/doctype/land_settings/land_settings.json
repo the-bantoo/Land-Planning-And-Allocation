@@ -1,0 +1,42 @@
+{
+ "actions": [],
+ "creation": "2020-09-19 11:13:19.113284",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "construction_item"
+ ],
+ "fields": [
+  {
+   "fieldname": "construction_item",
+   "fieldtype": "Link",
+   "label": "Construction Item",
+   "options": "Item"
+  }
+ ],
+ "links": [],
+ "modified": "2020-09-21 13:45:27.813497",
+ "modified_by": "Administrator",
+ "module": "Land Planning And Allocation",
+ "name": "Land Settings",
+ "owner": "duncan@thebantoo.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

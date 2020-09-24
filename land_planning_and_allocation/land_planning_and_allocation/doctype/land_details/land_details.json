@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "autoname": "field:plot_id",
+ "creation": "2020-09-17 08:31:12.144216",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "plot_id",
+  "area",
+  "types",
+  "customer_name",
+  "map_and_coordinates"
+ ],
+ "fields": [
+  {
+   "fieldname": "plot_id",
+   "fieldtype": "Data",
+   "label": "Plot ID",
+   "unique": 1
+  },
+  {
+   "fieldname": "area",
+   "fieldtype": "Data",
+   "label": "Area "
+  },
+  {
+   "fieldname": "types",
+   "fieldtype": "Data",
+   "label": "Types"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name"
+  },
+  {
+   "fieldname": "map_and_coordinates",
+   "fieldtype": "Geolocation",
+   "label": "Map And Coordinates"
+  }
+ ],
+ "links": [],
+ "modified": "2020-09-21 13:44:38.809188",
+ "modified_by": "Administrator",
+ "module": "Land Planning And Allocation",
+ "name": "Land Details",
+ "owner": "duncan@thebantoo.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Planning",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
