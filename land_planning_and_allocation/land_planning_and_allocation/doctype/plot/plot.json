@@ -8,7 +8,7 @@
  "field_order": [
   "plot_id",
   "subdivision",
-  "land_project",
+  "project",
   "column_break_3",
   "plot_type",
   "status",
@@ -17,8 +17,8 @@
   "area",
   "dimensions",
   "column_break_10",
-  "length_m",
-  "width_m",
+  "length",
+  "width",
   "map_section",
   "map",
   "coordinates_section",
@@ -27,6 +27,7 @@
   "customer_name",
   "customer_sales_invoice",
   "column_break_13",
+  "plot_price",
   "value",
   "balance"
  ],
@@ -41,9 +42,17 @@
   },
   {
    "fieldname": "subdivision",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Subdivision",
+   "options": "Subdivision",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project",
    "reqd": 1
   },
   {
@@ -51,9 +60,17 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "land_project",
-   "fieldtype": "Data",
-   "label": "Project",
+   "fieldname": "plot_type",
+   "fieldtype": "Select",
+   "label": "Plot Type",
+   "options": "Residential\nCommercial\nOther"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Available\nReserved\nUnder Construction\nCompleted",
    "reqd": 1
   },
   {
@@ -69,15 +86,8 @@
   },
   {
    "fieldname": "area",
-   "fieldtype": "Int",
-   "label": "Area (sqm)",
-   "reqd": 1
-  },
-  {
-   "fieldname": "dimensions",
-   "fieldtype": "Read Only",
-   "label": "Dimensions",
-   "read_only": 1
+   "fieldtype": "Data",
+   "label": "Area (sqm)"
   },
   {
    "fieldname": "column_break_10",
@@ -85,20 +95,19 @@
   },
   {
    "allow_in_quick_entry": 1,
-   "fieldname": "length_m",
+   "fieldname": "length",
    "fieldtype": "Int",
    "label": "Length (m)"
   },
   {
    "allow_in_quick_entry": 1,
-   "fieldname": "width_m",
+   "fieldname": "width",
    "fieldtype": "Int",
    "label": "Width (m)"
   },
   {
    "fieldname": "map_section",
-   "fieldtype": "Section Break",
-   "label": "Map"
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "map",
@@ -140,6 +149,12 @@
    "fieldtype": "Column Break"
   },
   {
+   "fieldname": "plot_price",
+   "fieldtype": "Link",
+   "label": "Plot price",
+   "options": "Item Price"
+  },
+  {
    "fieldname": "value",
    "fieldtype": "Read Only",
    "label": "Value "
@@ -150,23 +165,14 @@
    "label": "Balance"
   },
   {
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Status",
-   "options": "Available\nReserved\nUnder Construction\nCompleted",
-   "reqd": 1
-  },
-  {
-   "fieldname": "plot_type",
-   "fieldtype": "Select",
-   "label": "Plot Type",
-   "options": "Residential\nCommercial\nOther"
+   "fieldname": "dimensions",
+   "fieldtype": "Read Only",
+   "label": "Dimensions"
   }
  ],
  "links": [],
- "modified": "2020-09-25 10:28:19.877822",
- "modified_by": "duncan@thebantoo.com",
+ "modified": "2020-10-02 11:30:23.245396",
+ "modified_by": "Administrator",
  "module": "Land Planning And Allocation",
  "name": "Plot",
  "owner": "duncan@thebantoo.com",

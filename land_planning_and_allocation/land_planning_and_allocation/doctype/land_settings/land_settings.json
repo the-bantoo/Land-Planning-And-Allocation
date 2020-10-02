@@ -5,7 +5,9 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "construction_item"
+  "construction_item",
+  "land_in_bulk_group",
+  "land_for_sale_group"
  ],
  "fields": [
   {
@@ -13,11 +15,23 @@
    "fieldtype": "Link",
    "label": "Construction Item",
    "options": "Item"
+  },
+  {
+   "fieldname": "land_in_bulk_group",
+   "fieldtype": "Link",
+   "label": "Land in Bulk Group",
+   "options": "Item Group"
+  },
+  {
+   "fieldname": "land_for_sale_group",
+   "fieldtype": "Link",
+   "label": "Land for Sale Group",
+   "options": "Item Group"
   }
  ],
  "links": [],
- "modified": "2020-09-21 13:45:27.813497",
- "modified_by": "Administrator",
+ "modified": "2020-09-29 14:55:08.985848",
+ "modified_by": "duncan@thebantoo.com",
  "module": "Land Planning And Allocation",
  "name": "Land Settings",
  "owner": "duncan@thebantoo.com",
@@ -31,6 +45,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Planning",
    "share": 1,
    "write": 1
   }

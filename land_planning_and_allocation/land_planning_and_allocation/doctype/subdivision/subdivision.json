@@ -47,8 +47,7 @@
   },
   {
    "fieldname": "section_break_9",
-   "fieldtype": "Section Break",
-   "label": "Subdivision Map"
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "map",
@@ -90,8 +89,8 @@
   }
  ],
  "links": [],
- "modified": "2020-09-21 13:44:53.083118",
- "modified_by": "Administrator",
+ "modified": "2020-09-28 18:06:11.344306",
+ "modified_by": "duncan@thebantoo.com",
  "module": "Land Planning And Allocation",
  "name": "Subdivision",
  "owner": "duncan@thebantoo.com",

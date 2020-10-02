@@ -1,5 +1,5 @@
 
-frappe.listview_settings['Plot'] = {
+frappe.listview_settings['subdivision'] = {
 	add_fields: ["status"],
 	get_indicator: function(doc) {
 		return [__(doc.status), {
