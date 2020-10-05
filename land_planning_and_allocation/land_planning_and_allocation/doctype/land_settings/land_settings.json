@@ -1,13 +1,15 @@
 {
- "actions": [],
- "creation": "2020-09-19 11:13:19.113284",
+ "creation": "2020-10-05 19:04:53.141814",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "construction_item",
   "land_in_bulk_group",
-  "land_for_sale_group"
+  "land_for_sale_group",
+  "bulk_land_warehouse",
+  "sales_land_warehouse",
+  "subtract_created_plots_from_bulk"
  ],
  "fields": [
   {
@@ -27,23 +29,39 @@
    "fieldtype": "Link",
    "label": "Land for Sale Group",
    "options": "Item Group"
+  },
+  {
+   "default": "0",
+   "fieldname": "subtract_created_plots_from_bulk",
+   "fieldtype": "Check",
+   "label": "Subtract Created Plots from Bulk"
+  },
+  {
+   "fieldname": "bulk_land_warehouse",
+   "fieldtype": "Link",
+   "label": "Bulk Land Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "sales_land_warehouse",
+   "fieldtype": "Link",
+   "label": "Sales Land Warehouse",
+   "options": "Warehouse"
   }
  ],
- "links": [],
- "modified": "2020-09-29 14:55:08.985848",
- "modified_by": "duncan@thebantoo.com",
+ "issingle": 1,
+ "modified": "2020-10-05 19:47:59.378915",
+ "modified_by": "Administrator",
  "module": "Land Planning And Allocation",
  "name": "Land Settings",
- "owner": "duncan@thebantoo.com",
+ "owner": "Administrator",
  "permissions": [
   {
    "create": 1,
    "delete": 1,
    "email": 1,
-   "export": 1,
    "print": 1,
    "read": 1,
-   "report": 1,
    "role": "System Manager",
    "share": 1,
    "write": 1
@@ -52,10 +70,8 @@
    "create": 1,
    "delete": 1,
    "email": 1,
-   "export": 1,
    "print": 1,
    "read": 1,
-   "report": 1,
    "role": "Planning",
    "share": 1,
    "write": 1

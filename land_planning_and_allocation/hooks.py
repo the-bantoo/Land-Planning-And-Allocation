@@ -86,7 +86,12 @@ app_license = "MIT"
 
 doc_events = {
     "Plot": {
-        "after_insert": "land_planning_and_allocation.api.create_item"
+        "after_insert": "land_planning_and_allocation.api.create_item",
+        "validate": "land_planning_and_allocation.api.calculate_plot_details"
+    },
+
+    "Project":{
+        "after_insert": "land_planning_and_allocation.api.create_warehouse"
     }
 }
 

@@ -1,22 +1,36 @@
 import frappe
 from frappe import _   
 
-def create_item(doc, method):
+def create_warehouse(doc, method):
+    pass
 
-    doc = frappe.get_doc({
+def create_item(plot, method):
+    settings = frappe.get_doc('Land Settings')
+
+    plot_item = frappe.get_doc({
         "doctype": "Item",
-        "item_group": doc.subdivision,
-        "item_code": "Plot " + str(doc.plot_id),
+        "item_group": settings.land_for_sale_group,
+        "default_warehouse": settings.sales_land_warehouse,
+        "item_code": "Plot " + str(plot.plot_id),
         "land": 1,
         "is_stock_item": 1,
-        "stock_uom": "Square Meter",
-        "opening_stock": doc.area,
-        "standard_rate": doc.plot_price,
+        "stock_uom": "Nos",
+        "opening_stock": 1,
+        "standard_rate": plot.plot_price,
         "is_purchase_item": 0,
         "is_sales_item": 1,
-        "valuation_rate": doc.plot_price,
+        "valuation_rate": plot.plot_price,
         "include_item_in_manufacturing": 0,
-        "description": "Project: " + str(doc.project) + "<br \>" + "Subdivision: " + str(doc.subdivision) + "<br \>" + "Plot ID: " + str(doc.plot_id) + "<br \>" + "Dimensions: " + str(doc.dimensions) + "<br \>" + "Area: " + str(doc.area) + "sqm",
+        "description": "Project: " + str(plot.project) + "<br \>" + "Subdivision: " + str(plot.subdivision) + "<br \>" + "Plot ID: " + str(plot.plot_id) + "<br \>" + "Dimensions: " + str(plot.dimensions) + "<br \>" + "Area: " + str(plot.area) + "sqm",
     })
-    doc.flags.ignore_permission = True
-    doc.insert()
+    plot_item.flags.ignore_permission = True
+    plot_item.insert()
+
+    plot.plot_item = "Plot " + str(plot.plot_id)
+    plot.save()
+
+def calculate_plot_details(plot, method):
+    if not plot.area or int(plot.area) <= 0:
+        plot.area = int(plot.width) * int(plot.length)
+        
+    plot.dimensions = str(plot.width) + " x " + str(plot.length) + "m"
