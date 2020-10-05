@@ -1,5 +1,4 @@
 {
- "actions": [],
  "autoname": "field:plot_id",
  "creation": "2020-09-17 07:55:48.834193",
  "doctype": "DocType",
@@ -7,15 +6,18 @@
  "engine": "InnoDB",
  "field_order": [
   "plot_id",
+  "plot_no",
   "subdivision",
   "project",
   "column_break_3",
   "plot_type",
+  "plot_item",
   "status",
   "section_break_7",
   "land_details",
   "area",
   "dimensions",
+  "plot_price",
   "column_break_10",
   "length",
   "width",
@@ -27,7 +29,6 @@
   "customer_name",
   "customer_sales_invoice",
   "column_break_13",
-  "plot_price",
   "value",
   "balance"
  ],
@@ -71,7 +72,7 @@
    "in_list_view": 1,
    "label": "Status",
    "options": "Available\nReserved\nUnder Construction\nCompleted",
-   "reqd": 1
+   "read_only": 1
   },
   {
    "collapsible": 1,
@@ -97,13 +98,15 @@
    "allow_in_quick_entry": 1,
    "fieldname": "length",
    "fieldtype": "Int",
-   "label": "Length (m)"
+   "label": "Length (m)",
+   "reqd": 1
   },
   {
    "allow_in_quick_entry": 1,
    "fieldname": "width",
    "fieldtype": "Int",
-   "label": "Width (m)"
+   "label": "Width (m)",
+   "reqd": 1
   },
   {
    "fieldname": "map_section",
@@ -136,13 +139,15 @@
    "fieldname": "customer_name",
    "fieldtype": "Link",
    "label": "Customer Name",
-   "options": "Customer"
+   "options": "Customer",
+   "read_only": 1
   },
   {
    "fieldname": "customer_sales_invoice",
    "fieldtype": "Link",
    "label": "Customer Sales Invoice",
-   "options": "Sales Invoice"
+   "options": "Sales Invoice",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_13",
@@ -150,9 +155,9 @@
   },
   {
    "fieldname": "plot_price",
-   "fieldtype": "Link",
+   "fieldtype": "Currency",
    "label": "Plot price",
-   "options": "Item Price"
+   "reqd": 1
   },
   {
    "fieldname": "value",
@@ -168,10 +173,22 @@
    "fieldname": "dimensions",
    "fieldtype": "Read Only",
    "label": "Dimensions"
+  },
+  {
+   "fieldname": "plot_item",
+   "fieldtype": "Link",
+   "label": "Plot Item",
+   "options": "Item",
+   "read_only": 1
+  },
+  {
+   "fieldname": "plot_no",
+   "fieldtype": "Data",
+   "label": "Plot No.",
+   "unique": 1
   }
  ],
- "links": [],
- "modified": "2020-10-02 11:30:23.245396",
+ "modified": "2020-10-05 22:41:52.089754",
  "modified_by": "Administrator",
  "module": "Land Planning And Allocation",
  "name": "Plot",
