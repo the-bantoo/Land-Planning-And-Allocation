@@ -6,7 +6,6 @@ def create_warehouse(doc, method):
 
 def create_item(plot, method):
     settings = frappe.get_doc('Land Settings')
-
     plot_item = frappe.get_doc({
         "doctype": "Item",
         "item_group": settings.land_for_sale_group,
@@ -34,3 +33,18 @@ def calculate_plot_details(plot, method):
         plot.area = int(plot.width) * int(plot.length)
         
     plot.dimensions = str(plot.width) + " x " + str(plot.length) + "m"
+
+def project_item(project, method):
+    settings = frappe.get_doc('Land Settings')
+    project_item = frappe.get_doc({
+        "doctype": "Item",
+        "item_name": project.project_name,
+        "item_group": settings.land_in_bulk_group,
+        "land": 1,
+        "item_code": project.project_name,
+        "is_stock_item": 1,
+        "stock_uom": "Square Meter",
+        "include_item_in_manufacturing": 0,
+    })
+    project_item.flags.ignore_permission = True
+    project_item.insert()
