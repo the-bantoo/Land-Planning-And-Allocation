@@ -7,9 +7,17 @@
   "construction_item",
   "land_in_bulk_group",
   "land_for_sale_group",
+<<<<<<< HEAD
   "bulk_land_warehouse",
   "sales_land_warehouse",
   "subtract_created_plots_from_bulk"
+=======
+  "subtract_created_plots_from_bulk",
+  "draft_purchase_invoice",
+  "column_break_6",
+  "bulk_land_warehouse",
+  "sales_land_warehouse"
+>>>>>>> Doctype Modification
  ],
  "fields": [
   {
@@ -47,11 +55,29 @@
    "fieldtype": "Link",
    "label": "Sales Land Warehouse",
    "options": "Warehouse"
+<<<<<<< HEAD
   }
  ],
  "issingle": 1,
  "modified": "2020-10-05 19:47:59.378915",
  "modified_by": "Administrator",
+=======
+  },
+  {
+   "default": "0",
+   "fieldname": "draft_purchase_invoice",
+   "fieldtype": "Check",
+   "label": "Draft Purchase Invoice"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "issingle": 1,
+ "modified": "2020-10-07 14:30:21.588388",
+ "modified_by": "duncan@thebantoo.com",
+>>>>>>> Doctype Modification
  "module": "Land Planning And Allocation",
  "name": "Land Settings",
  "owner": "Administrator",
