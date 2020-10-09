@@ -7,17 +7,13 @@
   "construction_item",
   "land_in_bulk_group",
   "land_for_sale_group",
-<<<<<<< HEAD
   "bulk_land_warehouse",
   "sales_land_warehouse",
-  "subtract_created_plots_from_bulk"
-=======
   "subtract_created_plots_from_bulk",
   "draft_purchase_invoice",
   "column_break_6",
   "bulk_land_warehouse",
   "sales_land_warehouse"
->>>>>>> Doctype Modification
  ],
  "fields": [
   {
