@@ -51,56 +51,53 @@
    "fieldtype": "Link",
    "label": "Sales Land Warehouse",
    "options": "Warehouse"
-<<<<<<< HEAD
-  }
- ],
- "issingle": 1,
- "modified": "2020-10-05 19:47:59.378915",
- "modified_by": "Administrator",
-=======
   },
   {
-   "default": "0",
-   "fieldname": "draft_purchase_invoice",
-   "fieldtype": "Check",
-   "label": "Draft Purchase Invoice"
-  },
-  {
-   "fieldname": "column_break_6",
-   "fieldtype": "Column Break"
-  }
- ],
- "issingle": 1,
- "modified": "2020-10-07 14:30:21.588388",
- "modified_by": "duncan@thebantoo.com",
->>>>>>> Doctype Modification
- "module": "Land Planning And Allocation",
- "name": "Land Settings",
- "owner": "Administrator",
- "permissions": [
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "print": 1,
-   "read": 1,
-   "role": "System Manager",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "print": 1,
-   "read": 1,
-   "role": "Planning",
-   "share": 1,
-   "write": 1
-  }
- ],
- "quick_entry": 1,
- "sort_field": "modified",
- "sort_order": "DESC",
- "track_changes": 1
+  "issingle": 1,
+  "modified": "2020-10-05 19:47:59.378915",
+  "modified_by": "Administrator"
+    },
+    {
+    "default": "0",
+    "fieldname": "draft_purchase_invoice",
+    "fieldtype": "Check",
+    "label": "Draft Purchase Invoice"
+    },
+    {
+    "fieldname": "column_break_6",
+    "fieldtype": "Column Break"
+    }
+  ],
+  "issingle": 1,
+  "modified": "2020-10-07 14:30:21.588388",
+  "modified_by": "duncan@thebantoo.com",
+  "module": "Land Planning And Allocation",
+  "name": "Land Settings",
+  "owner": "Administrator",
+  "permissions": [
+    {
+    "create": 1,
+    "delete": 1,
+    "email": 1,
+    "print": 1,
+    "read": 1,
+    "role": "System Manager",
+    "share": 1,
+    "write": 1
+    },
+    {
+    "create": 1,
+    "delete": 1,
+    "email": 1,
+    "print": 1,
+    "read": 1,
+    "role": "Planning",
+    "share": 1,
+    "write": 1
+    }
+  ],
+  "quick_entry": 1,
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
 }
