@@ -1,9 +1,6 @@
 import frappe
 from frappe import _   
 
-def create_warehouse(doc, method):
-    pass
-
 def create_item(plot, method):
     settings = frappe.get_doc('Land Settings')
     plot_item = frappe.get_doc({
