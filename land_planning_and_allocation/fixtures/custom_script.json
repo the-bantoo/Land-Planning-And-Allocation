@@ -1,0 +1,13 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Custom Script",
+  "dt": "Sales Invoice",
+  "modified": "2020-10-27 15:28:37.214354",
+  "name": "Sales Invoice-Client",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "frappe.ui.form.on('Sales Invoice', {\n\trefresh(frm) {\n\t\t// your code here\n\t}\n})\n\nfrappe.ui.form.on('Sales Invoice Item', {\n\t// cdt is Child DocType name i.e Quotation Item\n    // cdn is the row name for e.g bbfcb8da6a\n    item_code(frm, cdt, cdn) {\n        let item_row = frappe.get_doc(cdt, cdn); //get the new item row\n        let item_code = item_row.item_code;\n        \n        if(item_code.toLowerCase().startsWith(\"plot \")){ //test if item is a plot\n            let plot_id = item_code.substr(5).toString(); //strip off \"Plot \" from Plot Item title\n\n            frm.set_value('update_stock', '1');\n            if (frm.set_warehouse === \"\" || !frm.set_warehouse) {\n                frappe.call({\n                    method: \"frappe.client.get\",\n                    args: {\n                        doctype: \"Land Settings\"\n                    },\n                    callback(r) {\n                        if(r.message) {          \n                            frm.set_value('set_warehouse', r.message.sales_land_warehouse);\n                        }\n                    }\n                });\n                \n            }\n\n            \n            //get Plot with matching plot name and assign its values to those of sales invoice item\n            frappe.call({\n    \t\t\t\"method\": \"frappe.client.get\",\n    \t\t\t\"args\": {\n    \t\t\t\t\"doctype\": \"Plot\",\n    \t\t\t\t\"name\": plot_id\n    \t\t\t},\n    \t\t\t\"callback\": function(data) {\n    \t\t\t\tlet plot = data.message;\n    \n    \t\t\t\tif (plot) {\n    \t\t\t\t\titem_row.plot_id = plot_id;\n                        item_row.land_project = plot.project;\n                        item_row.subdivision = plot.subdivision;\n    \t\t\t\t}\n    \t\t\t}\n    \t\t});\n        }\n    }\n});\n"
+ }
+]
