@@ -147,3 +147,72 @@ doc_events = {
 # exempt linked doctypes from being automatically cancelled
 #
 # auto_cancel_exempted_doctypes = ["Auto Repeat"]
+
+
+
+fixtures = [
+	{
+		"dt": "Custom Script",
+		"filters": [
+			[
+				"name", "in", [
+					"Sales Invoice-Client"
+				]
+			]
+		]
+
+	},
+	{
+		"dt": "Warehouse",
+        "filters": [
+            [
+                "warehouse_name", "in", [
+                    "Bulk Land",
+                    "Sales Land"
+                ]
+            ]
+        ]
+	},
+	{
+		"dt": "Project Type",
+        "filters": [
+            [
+                "project_type", "in", [
+                        "Land"
+                    ]
+            ]
+        ]
+	},
+	{
+		"dt": "Notification",
+        "filters": [
+            "is_standard != 1"
+        ]
+	},
+	{
+		"dt": "Custom Field",
+		"filters": [
+			[
+				"name", "in", [
+					"Sale Invoice Item-land_details",
+					"Sale Invoice Item-plot_id",
+					"Sale Invoice Item-column_break_7",
+					"Sale Invoice Item-land_project",
+					"Sale Invoice Item-subdivision",
+					"Customer-nrc_number",
+					"Project-map_section",
+					"Project-map",
+					"Project-coordinates_section",
+					"Project-land_coordinates",
+					"Project-project_land_details",
+					"Project-area_sqm",
+					"Project-ready_for_sale",
+					"Project-project_subdivision",
+					"Project-subdivision",
+					"Item-land"
+
+				]
+			]
+		]
+	}
+]
